@@ -2,6 +2,7 @@ import React, {useRef, useState} from 'react'
 import { Card, Button, Form, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory } from "react-router-dom"
+import Logo from "../assets/iDiversity_logo.png";
 
 export default function Login() {
     const emailRef = useRef()
@@ -28,6 +29,7 @@ export default function Login() {
 
     return (
         <>
+            <img src={Logo} className="text-center mb-4 ml-5" alt="logo_idiversity" />
         <Card>
             <Card.Body>
                 <h2 className="text-center mb-4">Log in</h2>
