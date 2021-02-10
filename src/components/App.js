@@ -25,7 +25,7 @@ function App() {
                             <Route path = "/login" component={Login} />
                             <Route path="/forgot-password" component={ForgotPassword} />
                             <Route path = "/admin" component={Admin} />
-                            <Redirect from="/" to="/admin/dashboard" />
+                            <Redirect from="/" to="/login" />
                         </Switch>
                     </AuthProvider>
                 </Router>
