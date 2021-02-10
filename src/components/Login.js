@@ -2,7 +2,7 @@ import React, {useRef, useState} from 'react'
 import { Card, Button, Form, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory } from "react-router-dom"
-import Logo from "../assets/iDiversity_logo.png";
+import Logo from "../assets/img/iDiversity_logo.png";
 
 export default function Login() {
     const emailRef = useRef()
@@ -19,7 +19,7 @@ export default function Login() {
             setError('')
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
-            history.push("/")
+            history.push("/admin")
         } catch {
             setError('Failed to log in : check your email/password')
         }

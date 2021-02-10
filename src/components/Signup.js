@@ -2,7 +2,7 @@ import React, {useRef, useState} from 'react'
 import { Card, Button, Form, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory } from "react-router-dom"
-import Logo from "../assets/iDiversity_logo.png";
+import Logo from "../assets/img/iDiversity_logo.png";
 
 
 export default function Signup() {
@@ -27,7 +27,7 @@ export default function Signup() {
             setError('')
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value)
-            history.push("/")
+            history.push("/admin")
         } catch {
             setError('Failed to create an account')
         }
